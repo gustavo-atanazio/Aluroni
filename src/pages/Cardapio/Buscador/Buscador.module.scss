@@ -1,0 +1,32 @@
+@import 'styles/variaveis';
+@import 'styles/breakpoints';
+
+.buscador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    background-color: $grey;
+    border-radius: 5px;
+    height: 42px;
+    padding: 0 15px;
+    width: 400px;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+
+    input {
+        background-color: $grey;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        outline: none;
+        width: 100%;
+
+        &::placeholder {
+            color: #4C4D5E;
+        }
+    }
+}
