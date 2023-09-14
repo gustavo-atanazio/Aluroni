@@ -1,0 +1,55 @@
+@import "styles/variaveis";
+
+.ordenador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $grey;
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 40px;
+    min-width: 240px;
+    padding: 0 40px;
+    position: relative;
+
+    &--ativo {
+        background-color: $blue;
+        color: #FFF;
+    }
+
+    &__options {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+
+        &--ativo {
+            display: flex;
+        }
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: $grey;
+        border-top: 2px solid $light-grey;
+        box-sizing: border-box;
+        color: $black;
+        height: 40px;
+        width: inherit;
+
+        &:hover, &--ativo {
+            background-color: $blue;
+            cursor: pointer;
+            color: #FFF;
+        }
+    }
+}
