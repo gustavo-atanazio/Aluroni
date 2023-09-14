@@ -68,4 +68,14 @@
         font-size: 3rem;
         margin-bottom: 30px;
     }
+
+    &__filtros {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
