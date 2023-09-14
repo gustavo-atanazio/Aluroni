@@ -8,6 +8,7 @@ import style from './Cardapio.module.scss';
 
 function Cardapio() {
     const [busca, setBusca] = useState('');
+    const [filtro, setFiltro] = useState<number | null>(null);
 
     return (
         <main>
@@ -29,7 +30,10 @@ function Cardapio() {
                 />
 
                 <div className={style.cardapio__filtros}>
-                    <Filtros/>
+                    <Filtros
+                        filtro={filtro}
+                        setFiltro={setFiltro}
+                    />
                 </div>
             </section>
         </main>
