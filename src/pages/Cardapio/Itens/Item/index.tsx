@@ -10,7 +10,7 @@ function Item(props: ItemProps) {
     return (
         <div className={style.item}>
             <div className={style.item__imagem}>
-                <img src="" alt={title}/>
+                <img src={photo} alt={title}/>
             </div>
 
             <div className={style.item__descricao}>
