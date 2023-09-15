@@ -40,7 +40,7 @@ function Itens(props: ItensProps) {
     }
 
     useEffect(() => {
-        const novaLista = itens.filter(item => testaBusca(item.title) && testaFiltro(item.id));
+        const novaLista = itens.filter(item => testaBusca(item.title) && testaFiltro(item.category.id));
         setLista(ordenar(novaLista));
     }, [busca, filtro, ordenador]);
 
