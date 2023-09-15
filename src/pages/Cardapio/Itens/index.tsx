@@ -10,7 +10,7 @@ interface ItensProps {
 }
 
 function Itens(props: ItensProps) {
-    const { busca, filtro } = props;
+    const { busca, filtro, ordenador } = props;
     const [lista, setLista] = useState(itens);
 
     function testaBusca(title: string) {
@@ -23,10 +23,26 @@ function Itens(props: ItensProps) {
         return true;
     }
 
+    function ordenar(novaLista: typeof itens) {
+        switch (ordenador) {
+            case 'porcao':
+                return novaLista.sort((a, b) => a.size > b.size ? 1 : -1);
+
+            case 'qtd_pessoas':
+                return novaLista.sort((a, b) => a.serving > b.serving ? 1 : -1);
+
+            case 'preco':
+                return novaLista.sort((a, b) => a.price > b.price ? 1 : -1);
+
+            default:
+                return novaLista;
+        }
+    }
+
     useEffect(() => {
         const novaLista = itens.filter(item => testaBusca(item.title) && testaFiltro(item.id));
-        setLista(novaLista);
-    }, [busca, filtro]);
+        setLista(ordenar(novaLista));
+    }, [busca, filtro, ordenador]);
 
     return (
         <div className={style.itens}>
