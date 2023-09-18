@@ -7,19 +7,19 @@ interface BuscadorProps {
 }
 
 function Buscador({ busca, setBusca }: BuscadorProps) {
-    return (
-        <div className={style.buscador}>
-            <input
-                value={busca}
-                onChange={event => setBusca(event.target.value)}
-                placeholder='Buscar'
-            />
-            <CgSearch
-                size={20}
-                color='#4C4D5E'
-            />
-        </div>
-    );
+	return (
+		<div className={style.buscador}>
+			<input
+				value={busca}
+				onChange={event => setBusca(event.target.value)}
+				placeholder='Buscar'
+			/>
+			<CgSearch
+				size={20}
+				color='#4C4D5E'
+			/>
+		</div>
+	);
 }
 
 export default Buscador;

@@ -20,7 +20,7 @@
     "rules": {
         "indent": [
             "error",
-            "tab"
+            "space"
         ],
         "linebreak-style": [
             "error",
@@ -33,6 +33,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/react-in-jsx-scope": "off"
     }
 }

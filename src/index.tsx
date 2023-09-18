@@ -6,9 +6,10 @@ import './index.css';
 
 import Cardapio from './pages/Cardapio';
 
+// eslint-disable-next-line react/no-deprecated
 ReactDOM.render(
-  <React.StrictMode>
-    <Cardapio/>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Cardapio/>
+	</React.StrictMode>,
+	document.getElementById('root')
 );

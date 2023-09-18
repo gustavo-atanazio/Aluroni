@@ -10,27 +10,27 @@ interface FiltrosProps {
 }
 
 function Filtros({ filtro, setFiltro }: FiltrosProps) {
-    function selecionaFiltro(opcao: IOpcao) {
-        if (filtro === opcao.id) return setFiltro(null);
-        return setFiltro(opcao.id);
-    }
+	function selecionaFiltro(opcao: IOpcao) {
+		if (filtro === opcao.id) return setFiltro(null);
+		return setFiltro(opcao.id);
+	}
 
-    return (
-        <div className={style.filtros}>
-            {filtros.map(opcao => (
-                <button
-                    onClick={() => selecionaFiltro(opcao)}
-                    className={classNames({
-                        [style.filtros__filtro]: true,
-                        [style['filtros__filtro--ativo']]: filtro === opcao.id
-                    })}
-                    key={opcao.id}
-                >
-                    {opcao.label}
-                </button>
-            ))}
-        </div>
-    );
+	return (
+		<div className={style.filtros}>
+			{filtros.map(opcao => (
+				<button
+					onClick={() => selecionaFiltro(opcao)}
+					className={classNames({
+						[style.filtros__filtro]: true,
+						[style['filtros__filtro--ativo']]: filtro === opcao.id
+					})}
+					key={opcao.id}
+				>
+					{opcao.label}
+				</button>
+			))}
+		</div>
+	);
 }
 
 export default Filtros;
