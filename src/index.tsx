@@ -4,12 +4,11 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import './index.css';
 
-import Cardapio from './pages/Cardapio';
+import AppRouter from 'routes';
 
-// eslint-disable-next-line react/no-deprecated
 ReactDOM.render(
 	<React.StrictMode>
-		<Cardapio/>
+		<AppRouter/>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
