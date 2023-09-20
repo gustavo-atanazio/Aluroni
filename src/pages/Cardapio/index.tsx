@@ -13,38 +13,30 @@ function Cardapio() {
 	const [ordenador, setOrdenador] = useState('');
 
 	return (
-		<main>
-			<header className={style.header}>
-				<div className={style.header__text}>
-                    A casa do código e da massa
-				</div>
-			</header>
+		<section className={style.cardapio}>
+			<h3 className={style.cardapio__titulo}>Cardápio</h3>
+			<Buscador
+				busca={busca}
+				setBusca={setBusca}
+			/>
 
-			<section className={style.cardapio}>
-				<h3 className={style.cardapio__titulo}>Cardápio</h3>
-				<Buscador
-					busca={busca}
-					setBusca={setBusca}
-				/>
-
-				<div className={style.cardapio__filtros}>
-					<Filtros
-						filtro={filtro}
-						setFiltro={setFiltro}
-					/>
-					<Ordenador
-						ordenador={ordenador}
-						setOrdenador={setOrdenador}
-					/>
-				</div>
-
-				<Itens
-					busca={busca}
+			<div className={style.cardapio__filtros}>
+				<Filtros
 					filtro={filtro}
-					ordenador={ordenador}
+					setFiltro={setFiltro}
 				/>
-			</section>
-		</main>
+				<Ordenador
+					ordenador={ordenador}
+					setOrdenador={setOrdenador}
+				/>
+			</div>
+
+			<Itens
+				busca={busca}
+				filtro={filtro}
+				ordenador={ordenador}
+			/>
+		</section>
 	);
 }
 
