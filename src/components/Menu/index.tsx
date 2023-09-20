@@ -1,4 +1,5 @@
 import { ReactComponent as Logo } from 'assets/logo.svg';
+import { Link } from 'react-router-dom';
 import style from './Menu.module.scss';
 
 function Menu() {
@@ -21,10 +22,12 @@ function Menu() {
         <nav className={style.menu}>
             <Logo/>
 
-			<ul>
+			<ul className={style.menu__list}>
 				{rotas.map((rota, index) => (
-					<li key={index}>
-						<a href={rota.to}>{rota.label}</a>
+					<li className={style.menu__link} key={index}>
+						<Link to={rota.to} className={style.menu__link}>
+							{rota.label}
+						</Link>
 					</li>
 				))}
 			</ul>
