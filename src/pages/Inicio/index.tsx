@@ -1,4 +1,5 @@
 import cardapio from 'data/cardapio.json';
+import nossaCasa from 'assets/nossa_casa.png';
 import styleTema from 'styles/Tema.module.scss';
 import style from './Inicio.module.scss';
 
@@ -20,6 +21,14 @@ function Inicio() {
                         <button className={style.recomendado__botao}>Ver mais</button>
                     </div>
                 ))}
+            </div>
+
+            <h3 className={styleTema.titulo}>Nossa casa</h3>
+            <div className={style.nossaCasa}>
+                <img src={nossaCasa} alt="Casa do Aluroni"/>
+                <div className={style.nossaCasa__endereco}>
+                    Rua Vergueiro, 3185 <br/> <br/> Vila Mariana - SP
+                </div>
             </div>
         </section>
     );
