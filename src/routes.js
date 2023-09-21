@@ -11,9 +11,9 @@ import NotFound from 'pages/NotFound';
 
 function AppRouter() {
     return (
-        <Router>
-            <Menu/>
-            <main>
+        <main className='container'>
+            <Router>
+                <Menu/>
                 <Routes>
                     <Route path='/' element={<Header/>}>
                         <Route index element={<Inicio/>}/>
@@ -22,9 +22,9 @@ function AppRouter() {
                     </Route>
                     <Route path='*' element={<NotFound/>}/>
                 </Routes>
-            </main>
-            <Footer/>
-        </Router>
+                <Footer/>
+            </Router>
+        </main>
     );
 }
 
