@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Menu from 'components/Menu';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 import Inicio from 'pages/Inicio';
 import Cardapio from 'pages/Cardapio';
@@ -20,6 +21,7 @@ function AppRouter() {
                     </Route>
                 </Routes>
             </main>
+            <Footer/>
         </Router>
     );
 }
