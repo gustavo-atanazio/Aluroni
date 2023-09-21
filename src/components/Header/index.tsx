@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import styleTema from 'styles/Tema.module.scss';
 import style from './Header.module.scss';
 
 function Header() {
@@ -10,7 +11,9 @@ function Header() {
                 </div>
             </header>
 
-            <Outlet/>
+            <div className={styleTema.container}>
+                <Outlet/>
+            </div>
         </>
     );
 }

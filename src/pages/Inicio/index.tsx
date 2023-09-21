@@ -1,4 +1,5 @@
 import cardapio from 'data/cardapio.json';
+import styleTema from 'styles/Tema.module.scss';
 import style from './Inicio.module.scss';
 
 function Inicio() {
@@ -7,7 +8,7 @@ function Inicio() {
 
     return (
         <section>
-            <h3 className={style.titulo}>Recomendações da cozinha</h3>
+            <h3 className={styleTema.titulo}>Recomendações da cozinha</h3>
 
             <div className={style.recomendados}>
                 {pratosRecomendados.map(item => (
