@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import styleTema from 'styles/Tema.module.scss';
 import style from './Header.module.scss';
 
-function Header() {
+function Header({ children }: { children?: React.ReactNode }) {
     return (
         <>
             <header className={style.header}>
@@ -13,6 +13,7 @@ function Header() {
 
             <div className={styleTema.container}>
                 <Outlet/>
+                {children}
             </div>
         </>
     );
