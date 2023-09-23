@@ -3,8 +3,17 @@
 
 .item {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    transition: .2s ease-in;
     width: 90%;
+
+    &:hover {
+        background-color: $grey;
+    }
 
     &__imagem {
         min-width: 240px;
@@ -21,11 +30,12 @@
 
     &__descricao {
         display: flex;
-        flex: 1;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: space-around;
-        padding: 0 20px;
+        flex: 1;
+        flex-wrap: wrap;
+
+        margin: 0 20px;
 
         @media (max-width: $desktop_xsm) {
             flex-direction: row;
