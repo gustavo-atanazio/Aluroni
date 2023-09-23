@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import classNames from 'classnames';
 import cardapio from 'data/cardapio.json';
+import Tags from 'components/Tags';
 import style from './Prato.module.scss';
 
 function Prato() {
@@ -33,26 +33,7 @@ function Prato() {
                         {prato.description}
                     </p>
 
-                    <div className={style.tags}>
-                        <div className={classNames({
-                            [style.tags__tipo]: true,
-                            [style[`tags__tipo__${prato.category.label.toLowerCase()}`]]: true
-                        })}>
-                            {prato.category.label}
-                        </div>
-
-                        <div className={style.tags__porcao}>
-                            {prato.size}g
-                        </div>
-
-                        <div className={style.tags__qtspessoas}>
-                            Serve {prato.serving} {prato.serving === 1 ? 'pessoa' : 'pessoas'}
-                        </div>
-
-                        <div className={style.tags__valor}>
-                            R$ {prato.price.toFixed(2)}
-                        </div>
-                    </div>
+                    <Tags {...prato}/>
                 </div>
             </section>
         </>
