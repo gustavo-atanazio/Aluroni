@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import cardapio from 'data/cardapio.json';
 import nossaCasa from 'assets/nossa_casa.png';
+import { Prato } from 'types/Prato';
+
 import styleTema from 'styles/Tema.module.scss';
 import style from './Inicio.module.scss';
 
@@ -9,7 +11,7 @@ function Inicio() {
     pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0, 3);
     const navigate = useNavigate();
 
-    function redirecionarParaDetalhes(prato: typeof cardapio[0]) {
+    function redirecionarParaDetalhes(prato: Prato) {
         navigate(`/prato/${prato.id}`, { state: { prato } });
     }
 

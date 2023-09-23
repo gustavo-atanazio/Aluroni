@@ -1,10 +1,8 @@
 import classNames from 'classnames';
-import itens from 'data/cardapio.json';
+import { Prato } from 'types/Prato';
 import style from './Item.module.scss';
 
-type ItemProps = typeof itens[0];
-
-function Item(props: ItemProps) {
+function Item(props: Prato) {
 	const { title, description, category, size, serving, price, photo } = props;
 
 	return (
