@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Tags from 'components/Tags';
 import { Prato } from 'types/Prato';
@@ -25,4 +26,4 @@ function Item(props: Prato) {
 	);
 }
 
-export default Item;
+export default memo(Item);
