@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import classNames from 'classnames';
 import filtros from './filtros.json';
 import style from './Filtros.module.scss';
@@ -33,4 +34,4 @@ function Filtros({ filtro, setFiltro }: FiltrosProps) {
 	);
 }
 
-export default Filtros;
+export default memo(Filtros);
