@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import classNames from 'classnames';
 import opcoes from './opcoes.json';
@@ -43,4 +43,4 @@ function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
 	);
 }
 
-export default Ordenador;
+export default memo(Ordenador);
