@@ -2,16 +2,14 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Menu from 'components/Menu';
-import Header from 'components/Header';
+const Header = lazy(() => import('components/Header'));
 import Footer from 'components/Footer';
 
-import Inicio from 'pages/Inicio';
-// import Cardapio from 'pages/Cardapio';
-import Sobre from 'pages/Sobre';
-import Prato from 'pages/Prato';
-import NotFound from 'pages/NotFound';
-
+const Inicio = lazy(() => import('pages/Inicio'));
 const Cardapio = lazy(() => import('pages/Cardapio'));
+const Sobre = lazy(() => import('pages/Sobre'));
+const Prato = lazy(() => import('pages/Prato'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 function AppRouter() {
     return (
