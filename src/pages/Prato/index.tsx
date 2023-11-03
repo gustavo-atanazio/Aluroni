@@ -1,9 +1,10 @@
+import { lazy } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import cardapio from 'data/cardapio.json';
-import NotFound from 'pages/NotFound';
+const NotFound = lazy(() => import('pages/NotFound'));
 
-import Header from 'components/Header';
-import Tags from 'components/Tags';
+const Header = lazy(() => import('components/Header'));
+const Tags = lazy(() => import('components/Tags'));
 
 import style from './Prato.module.scss';
 
