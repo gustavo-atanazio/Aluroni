@@ -1,10 +1,10 @@
 <h1 align='center'>Aluroni</h1>
 
 <div style='display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center'>
-    <img src='' width='260px' alt='Imagem do projeto'/>
-    <img src='' width='260px' alt='Imagem do projeto'/>
-    <img src='' width='260px' alt='Imagem do projeto'/>
-    <img src='' width='260px' alt='Imagem do projeto'/>
+    <img src='https://github.com/gustavo-atanazio/Aluroni/assets/124182846/55e2ca8b-aeea-4c71-bbaf-f1f1e18de1d9' width='260px' alt='Imagem do projeto'/>
+    <img src='https://github.com/gustavo-atanazio/Aluroni/assets/124182846/a71e293b-b6f9-4f57-ab08-e54706b301f1' width='260px' alt='Imagem do projeto'/>
+    <img src='https://github.com/gustavo-atanazio/Aluroni/assets/124182846/616dee45-9e90-4093-b092-564fd8765dee' width='260px' alt='Imagem do projeto'/>
+    <img src='https://github.com/gustavo-atanazio/Aluroni/assets/124182846/0eb82d99-9541-4e39-ba9d-cdf84c5533b7' width='260px' alt='Imagem do projeto'/>
 </div>
 
 <div align='center'>
